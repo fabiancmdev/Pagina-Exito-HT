@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'AchsNuevaSansRegular';
+    src: url('../fonts/ACHSNuevaSans-Regular.woff2') format('woff2'),
+        url('../fonts/ACHSNuevaSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AchsNuevaSerifBold';
+    src: url('../fonts/ACHSNuevaSerif-Bold.woff2') format('woff2'),
+        url('../fonts/ACHSNuevaSerif-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+* {
+    transition: all .2s ease-in-out;
+}
+h1,h2,.btnBackHome{
+    font-family: 'AchsNuevaSerifBold';
+}
+p{
+    font-family: 'AchsNuevaSansRegular';
+}
+.bannerHt{
+    position: relative;
+    height: 300px;
+    &::before{
+        content: '';
+        background: rgb(48,127,226);
+        background: linear-gradient(90deg, rgba(48,127,226,1) 50%, rgba(48,127,226,0) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+    }
+    & > img{
+        display: block;
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -2;
+    }
+    h1{
+        color: white;
+        font-size: 40px;
+        position: relative;
+        z-index: 2;
+        &::after{
+            content: '';
+            background-color: #002A6C;
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 70px;
+            height: 5px;
+        }
+    }
+}
+.mensajeExitoHt{
+    h2{
+        color: #002A6C;
+        font-size: 32px;
+        margin-bottom: 2rem;
+        position: relative;
+        &::after{
+            content: '';
+            background-color: #307FE2;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            width: 50px;
+            height: 5px;
+            margin: 0 auto;
+        }
+    }
+    p{
+        color: #373737;
+        font-size: 17px;
+        margin-bottom: 1rem;
+    }
+    .btnBackHome{
+        background-color: #307FE2;
+        border-radius: 30px;
+        color: white;
+        display: inline-block;
+        padding: 14px 32px;
+        text-decoration: none;
+        &:hover{
+            background-color: #002A6C;
+        }
+    }
+}
